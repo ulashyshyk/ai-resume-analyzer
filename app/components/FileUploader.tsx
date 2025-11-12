@@ -27,10 +27,10 @@ const FileUploader = ({onFileSelect} : FileUploaderProps) => {
             <div className='space-y-4 cursor-pointer'>
                 {file ? (
                     <div className='uploader-selected-file' onClick={(e)=>e.stopPropagation()}>
-                        <div className='flex items-center space-x-3'>
-                        <img src='/images/pdf.png' alt='pdf' className='size-10'/>
+                        <div className='flex items-center space-x-3 mx-auto'>
+                            <img src='/images/pdf.png' alt='pdf' className='size-10'/>
                             <div>
-                                <p className='ml-1 text-sm text-gray-700  font-medium truncate max-w-xs'>
+                                <p className='ml-1 text-sm text-gray-700 font-medium truncate max-w-xs'>
                                     {file.name}
                                 </p>
                                 <p className='text-sm text-gray-500'>
@@ -38,7 +38,7 @@ const FileUploader = ({onFileSelect} : FileUploaderProps) => {
                                 </p>
                             </div>
                         </div> 
-                        <button className='p-2 cursor-pointer' onClick={(e)=>{
+                        <button className='p-2 cursor-pointer ' onClick={(e)=>{
                             setFile(null)
                             onFileSelect?.(null)
                         }}>
